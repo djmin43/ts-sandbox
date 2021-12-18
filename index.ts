@@ -1,3 +1,3 @@
-import { testerFunction } from "./class-and-interface/classAndInterface";
+import { sayShoes } from "./design-patterns/designPatterns";
 
-testerFunction();
+sayShoes();

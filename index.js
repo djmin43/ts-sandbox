@@ -1,4 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var classAndInterface_1 = require("./class-and-interface/classAndInterface");
-(0, classAndInterface_1.testerFunction)();
+var designPatterns_1 = require("./design-patterns/designPatterns");
+(0, designPatterns_1.sayShoes)();
