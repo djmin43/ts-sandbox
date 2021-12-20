@@ -1,4 +1,6 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var designPatterns_1 = require("./design-patterns/designPatterns");
-(0, designPatterns_1.sayShoes)();
+setTimeout(function () { return console.info("A"); }, 1);
+setTimeout(function () { return console.info("B"); }, 2);
+console.info("C");
+setTimeout(function () { return console.info("D"); }, 1);
+setTimeout(function () { return console.info("E"); }, 2);
