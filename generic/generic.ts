@@ -9,14 +9,9 @@ type GetNameThree = <T>(value: T) => T;
 const myName = "jay";
 const count = 5;
 
-const getNameOne: GetNameOne = (myName, count) => {
+const getNameOne: GetNameOne | GetNameTwo<string> | GetNameThree = (
+  myName,
+  count
+) => {
   return myName;
-};
-
-const getNameTwo: GetNameTwo<string> = (value) => {
-  return value;
-};
-
-const getNameThree: GetNameThree = (value) => {
-  return value;
 };
