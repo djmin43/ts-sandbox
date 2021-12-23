@@ -21,14 +21,9 @@ type ResponseKeys = keyof APIResponse["user"];
 
 // Mapping Types
 
-type Account = {
-  id: number;
-  isEmployee: boolean;
-  notes: string[];
-};
+type Weekday = "Mon" | "Tue" | "Wed" | "Thu" | "Fri";
+type Day = Weekday | "Sat" | "Sun";
 
-type OptionalAccount = {
-  [K in keyof Account]: Account[K];
+let nextDay: { [K in Day]: Day } = {
+  Mon: "Tue",
 };
-
-type AccountKey = [keyof Account];
