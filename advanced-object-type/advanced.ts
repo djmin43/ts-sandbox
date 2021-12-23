@@ -24,6 +24,10 @@ type ResponseKeys = keyof APIResponse["user"];
 type Weekday = "Mon" | "Tue" | "Wed" | "Thu" | "Fri";
 type Day = Weekday | "Sat" | "Sun";
 
-let nextDay: { [K in Day]: Day } = {
-  Mon: "Tue",
+type Animals = {
+  Dog: "puppy";
+  Horse: "pony";
+  Cat: "kitten";
 };
+
+type Numbers = [1, 2, 3, 4, 5];
