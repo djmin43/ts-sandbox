@@ -9,7 +9,7 @@ type IndexTypeSignatureTwo = {
 
 type IndexTypeSignatureThree = {
   // this causes an error because it is not string or number.
-  [key: boolean]: string;
+  // [key: boolean]: string;
 };
 
 // If you feel string or number is not enough, you can use mapped type using 'in' syntax as below. This maps both key and value of object.
@@ -33,5 +33,5 @@ const sampleObjectTwo: IndexTypeMapOne = {
   lastName: "min",
   nationality: "Korea",
   // this throws an erorr because it is out of uniton type of object keys.
-  asdf: "hello",
+  // test: "hello",
 };

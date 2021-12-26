@@ -9,5 +9,5 @@ var sampleObjectTwo = {
     lastName: "min",
     nationality: "Korea",
     // this throws an erorr because it is out of uniton type of object keys.
-    asdf: "hello",
+    // test: "hello",
 };
