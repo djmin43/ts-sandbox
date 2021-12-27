@@ -21,3 +21,15 @@ type ArrayFunctionTwo<T> = {
 const arrayFunctionerTwo: ArrayFunctionTwo<string> = (value) => {
   return [value];
 };
+
+// Generic Type Aliases
+
+type GenericAlias<T> = {
+  target: T;
+  name: string;
+};
+
+const genericAliasObject: GenericAlias<number> = {
+  target: 111,
+  name: "generic",
+};
