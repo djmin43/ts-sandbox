@@ -23,7 +23,6 @@ const arrayFunctionerTwo: ArrayFunctionTwo<string> = (value) => {
 };
 
 // Generic Type Aliases
-
 type GenericAlias<T> = {
   target: T;
   name: string;
