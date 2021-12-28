@@ -26,7 +26,7 @@ type Day = Weekday | "Sat" | "Sun";
 
 type Animals = {
   Dog: "puppy";
-  Horse: "pony";
+  Horse: "pony"
   Cat: "kitten";
 };
 
