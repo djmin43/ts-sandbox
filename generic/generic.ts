@@ -1,16 +1,34 @@
-type GetNameOne = {
-  <T>(name: T): T;
+const arrayify = <T extends unknown>(value: T): Array<T> => [value];
+
+// each generic type is assigned to each call signature.
+// eacg function has its own generic type
+type ArrayFunctionOne = {
+  <T>(value: T): [T];
+  <U>(value: U): U;
+};
+const arrayFunctionerOne: ArrayFunctionOne = (value) => {
+  return [value];
 };
 
-type GetNameTwo<T> = (value: T) => T;
-
-type GetNameThree = <T>(value: T) => T;
-
-const myName = "jay";
-const count = 5;
-
-const getNameOne: GetNameOne | GetNameThree = (myName) => {
-  return myName;
+const arrayFunctionerThree: ArrayFunctionOne = (value) => {
+  return value;
 };
 
-getNameOne("hello");
+// on the other hand, this generic is assinged to all. that being said, generic should be assigned with type.
+type ArrayFunctionTwo<T> = {
+  (value: T): [T];
+};
+const arrayFunctionerTwo: ArrayFunctionTwo<string> = (value) => {
+  return [value];
+};
+
+// Generic Type Aliases
+type GenericAlias<T> = {
+  target: T;
+  name: string;
+};
+
+const genericAliasObject: GenericAlias<number> = {
+  target: 111,
+  name: "generic",
+};
