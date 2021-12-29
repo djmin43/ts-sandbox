@@ -14,9 +14,9 @@ const arrayFunctionerThree: ArrayFunctionOne = (value) => {
   return value;
 };
 
-// on the other hand, this generic is assinged to all. that being said, generic should be assigned with type.
+// on the other hand, this generic is assigned to all. that being said, generic should be assigned with type.
 type ArrayFunctionTwo<T> = {
-  (value: T): [T];
+  (value: string): [T];
 };
 const arrayFunctionerTwo: ArrayFunctionTwo<string> = (value) => {
   return [value];

@@ -31,3 +31,26 @@ type Animals = {
 };
 
 type Numbers = [1, 2, 3, 4, 5];
+
+
+// types out key and value of object
+type RecordType = Record<number, string>
+
+// same as RecordType type, but in mapped form
+type MappedAPIReponseType = {
+  [Key in number]: string
+}
+
+// makes every field value optional
+type PartialType = Partial<APIResponse>
+
+// makes every field value required
+type RequiredType = Required<APIResponse>
+
+// makes every field value readonly
+type ReadOnlyType = Readonly<APIResponse>
+
+// pick out a key
+type PickType = Pick<APIResponse['user'], 'userId'>
+
+type FriendListType = APIResponse['user']['friendList']
