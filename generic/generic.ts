@@ -32,3 +32,4 @@ const genericAliasObject: GenericAlias<number> = {
   target: 111,
   name: "generic",
 };
+
