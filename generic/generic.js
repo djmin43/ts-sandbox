@@ -11,5 +11,5 @@ var arrayFunctionerTwo = function (value) {
 };
 var genericAliasObject = {
     target: 111,
-    name: "generic",
+    name: 'generic',
 };

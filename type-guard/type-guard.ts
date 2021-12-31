@@ -2,8 +2,8 @@
 
 // typescript knows about JS's substring prototype.
 function doSomething(x: number | string) {
-  if (typeof x === "string") {
-    console.log(x.substring(1));
+  if (typeof x === 'string') {
+    console.log(x.substring(1))
     // typescript tells the user substing does not exist in string prototype
     // console.log(x.substing(1));
   }

@@ -1,7 +1,8 @@
 "use strict";
-function anyFunction(a, b) {
-    var result = a + b;
-    console.log(result);
-    return result;
-}
-anyFunction(3, 'f');
+var squareOne = {
+    width: 3,
+    height: 3
+};
+var squareTwo = {
+    width: 3,
+};

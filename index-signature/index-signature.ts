@@ -16,22 +16,22 @@ type IndexTypeSignatureThree = {
 type IndexTypeMapOne = {
   [key in ObjectKeys]: string;
 };
-type ObjectKeys = "firstName" | "lastName" | "nationality";
+type ObjectKeys = 'firstName' | 'lastName' | 'nationality';
 
 type IndexTypeMapTwo = {
   [key in string]: string;
 };
 
 const sampleObjectOne: IndexTypeMapOne = {
-  firstName: "jay",
-  lastName: "min",
-  nationality: "Canada",
-};
+  firstName: 'jay',
+  lastName: 'min',
+  nationality: 'Canada',
+}
 
 const sampleObjectTwo: IndexTypeMapOne = {
-  firstName: "jay",
-  lastName: "min",
-  nationality: "Korea",
+  firstName: 'jay',
+  lastName: 'min',
+  nationality: 'Korea',
   // this throws an erorr because it is out of uniton type of object keys.
   // test: "hello",
-};
+}
