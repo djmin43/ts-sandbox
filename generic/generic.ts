@@ -43,5 +43,14 @@ type DType = UnknownArrayType<string>
 
 type NumberArray = [number]
 
+type Tuple = [number, number]
+
 type InferArrayType<T> = T extends (infer U)[] ? U : T
 type EType = InferArrayType<number[]>
+type FType = InferArrayType<string[]>
+type GType = InferArrayType<{ hello: 'world' }>
+
+type SecondArg<F> = F extends (a: any, b: infer B) => any ? B : never
+
+type F = typeof Array['prototype']['slice']
+
