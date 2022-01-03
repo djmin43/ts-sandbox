@@ -33,3 +33,15 @@ const genericAliasObject: GenericAlias<number> = {
   name: 'generic',
 }
 
+// INFER also works as generic
+
+type UnknownArrayType<T> = T extends unknown[] ? T[number] : T
+type AType = UnknownArrayType<number[]>
+type BType = UnknownArrayType<string[]>
+type CType = UnknownArrayType<unknown[]>
+type DType = UnknownArrayType<string>
+
+type NumberArray = [number]
+
+type InferArrayType<T> = T extends (infer U)[] ? U : T
+type EType = InferArrayType<number[]>
