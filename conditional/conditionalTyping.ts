@@ -14,17 +14,18 @@ type IsString<T> = T extends string ? 'hello' : 'world'
 //   world: C,
 // }
 
-type Without<T, U> = T extends U ? 'hello' : never
+// type Without<T, U> = T extends U ? 'hello' : never
 
-type A = Without<
-  number | string,
-  boolean
->
+// type A = Without<
+//   number | string,
+//   boolean
+// >
 
-// infer keyword
+// // infer keyword
 
-type ElementType<T> = T extends unknown[] ? T[number] : T
-type B = ElementType<unknown[]>
+// type ElementType<T> = T extends unknown[] ? T[number] : T
+// type B = ElementType<unknown[]>
 
-type ElementTypeTwo<T> = T extends (infer U)[] ? U : T
-type C = ElementTypeTwo<number[]>
+// type ElementTypeTwo<T> = T extends (infer U)[] ? U : T
+// type C = ElementTypeTwo<number[]>
+
