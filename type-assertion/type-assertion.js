@@ -14,3 +14,15 @@ formatInput(input);
 // same as 'as'
 // this is not recommended to avoid confusion with TSX syntax.
 formatInput(input);
+function closeDialog(dialog) {
+    if (!('id' in dialog)) {
+        return;
+    }
+    setTimeout(function () {
+        return removeFromDOM(dialog, document.getElementById(dialog.id));
+    });
+}
+function removeFromDOM(dialog, element) {
+    element.parentNode.removeChild(element);
+    delete dialog.id;
+}

@@ -21,3 +21,29 @@ formatInput(input as 'hello')
 // same as 'as'
 // this is not recommended to avoid confusion with TSX syntax.
 formatInput(<string>input)
+
+// 2. Nonnull Assertion
+
+// nonNull assertion -> !
+
+type Dialog = {
+  id?: string
+}
+
+function closeDialog(dialog: Dialog) {
+  if (!('id' in dialog)) {
+    return
+  }
+  setTimeout(() =>
+    removeFromDOM(
+      dialog,
+      document.getElementById(dialog.id)
+    )
+  )
+}
+
+function removeFromDOM(dialog: Dialog, element: Element) {
+  element.parentNode!.removeChild(element)
+
+  delete dialog.id
+}
