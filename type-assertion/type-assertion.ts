@@ -37,7 +37,7 @@ function closeDialog(dialog: Dialog) {
   setTimeout(() =>
     removeFromDOM(
       dialog,
-      document.getElementById(dialog.id)
+      document.getElementById(dialog.id)!
     )
   )
 }
@@ -47,3 +47,9 @@ function removeFromDOM(dialog: Dialog, element: Element) {
 
   delete dialog.id
 }
+
+let userId: string = 'austin lee'
+
+userId.toUpperCase()
+
+userId.toString()

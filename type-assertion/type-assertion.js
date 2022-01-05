@@ -26,3 +26,6 @@ function removeFromDOM(dialog, element) {
     element.parentNode.removeChild(element);
     delete dialog.id;
 }
+var userId = 'austin lee';
+userId.toUpperCase();
+userId.toString();
