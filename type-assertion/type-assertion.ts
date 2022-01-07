@@ -37,7 +37,7 @@ function closeDialog(dialog: Dialog) {
   setTimeout(() =>
     removeFromDOM(
       dialog,
-      document.getElementById(dialog.id)!
+      document.getElementById(dialog.id!)!
     )
   )
 }
