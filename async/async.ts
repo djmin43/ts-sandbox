@@ -9,6 +9,9 @@ function second () {
 function third () {
   console.log('3')
 }
+function fourth () {
+  console.log('4')
+}
 
 async function randomNumber () {
   const [number] = (await axios.get('http://www.randomnumberapi.com/api/v1.0/randomnumber')).data
@@ -20,6 +23,7 @@ function scope () {
   second()
   randomNumber()
   third()
+  fourth()
 }
 
 scope()

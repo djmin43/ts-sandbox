@@ -49,6 +49,9 @@ function second() {
 function third() {
     console.log('3');
 }
+function fourth() {
+    console.log('4');
+}
 function randomNumber() {
     return __awaiter(this, void 0, void 0, function () {
         var number;
@@ -68,5 +71,6 @@ function scope() {
     second();
     randomNumber();
     third();
+    fourth();
 }
 scope();
