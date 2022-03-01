@@ -35,23 +35,38 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-function sayHello() {
-    return 'hello';
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var axios_1 = __importDefault(require("axios"));
+function first() {
+    console.log('1');
 }
-function sayYourName() {
+function second() {
+    console.log('2');
+}
+function third() {
+    console.log('3');
+}
+function randomNumber() {
     return __awaiter(this, void 0, void 0, function () {
-        var name;
+        var number;
         return __generator(this, function (_a) {
             switch (_a.label) {
-                case 0: return [4 /*yield*/, 'mike'];
+                case 0: return [4 /*yield*/, axios_1.default.get('http://www.randomnumberapi.com/api/v1.0/randomnumber')];
                 case 1:
-                    name = _a.sent();
-                    console.log('middle!');
-                    return [2 /*return*/, name];
+                    number = (_a.sent()).data[0];
+                    console.log(number);
+                    return [2 /*return*/];
             }
         });
     });
 }
-var a = sayYourName();
-var b = sayHello();
-console.log(a, b);
+function scope() {
+    first();
+    second();
+    randomNumber();
+    third();
+}
+scope();
